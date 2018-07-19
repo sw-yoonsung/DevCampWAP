@@ -1,0 +1,15 @@
+{
+  "name" : "progressive WorldCup !!",
+  "icons" : [
+    {
+      "src" : "./img/worldcup.png",
+      "type" : "image/png",
+      "size" : "144x144"
+    }
+  ],
+  "background_color" : "#0000FF",
+  "start_url" : "./",
+  "display_type" : "standalone",
+  "short_name" : "PWC",
+  "orientation": "portrait"
+}

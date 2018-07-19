@@ -63,6 +63,23 @@ function subscribeUser() {
   });
 }
 
+function subscribeUser() {
+    swRegistration.pushManager.subscribe({
+        // 푸시 수신 시 알람 표시 속성
+        userVisibleOnly: true
+    })
+        .then(function(subscription) {
+            console.log('User is subscribed:', subscription);
+            isSubscribed = true;
+
+            updateBtn();
+        })
+        .catch(function(err) {
+            console.log('Failed to subscribe the user: ', err);
+            updateBtn();
+        });
+}
+
 function unSubscribeUser() {
   swRegistration.pushManager.getSubscription().then(function(subscription) {
     subscription.unsubscribe().then(function(successful) {
